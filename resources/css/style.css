@@ -5,7 +5,6 @@ html, body {
   margin: 0 auto;
   background-color: black;
   width: 100%;
-
 }
 header {
   display: flex;
@@ -28,12 +27,14 @@ header img {
 }
 /*  here starts the nain content  */
 main {
-
   height: auto;
   width: 60%;
   margin: 0 auto;
   border: 1px solid white;
 }
+
+/* starting "banner"  */
+
 .banner {                /*   parent is "main" tag  */
   display: flex;
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
@@ -63,40 +64,113 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
-  width: 30%;
+  min-width: 30%;
   height: 40%;
   border: 1px solid red;
   background-color: black;
   margin: auto 10% auto 10%; /* can't seem to center it with "auto"  */
 }
 /*  navigation starts here */
-#products {     /*  parent is "main" tag  */
+#categories {     /*  parent is "main" tag  */
   display: flex;
-  width: 100%;
+  max-width: 100%;
   background-color: #b00024;
 }
-#products ul {
+#categories ul {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
   list-style: none;
   border: 1px solid forestgreen;
   justify-content: space-around;
   text-align: center;
   margin: 0 10%;
 }
-#products li {
+#categories li {
   display: inline-flex;
-  margin: 0 auto;
+  margin: 5px auto;
   max-width: 100%;
-  display: inline-flex;
   border: 1px solid hotpink;
-  padding: 2% 2%;
-  margin: 0 0;
-  font-size: 1.25rem;
+  padding: 10px;
   text-align: center;
+  font-size: 1.25rem;
 }
 
+/*  here starts the "products" section  */
+
+.products {
+  border: 1px solid springgreen;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+.box {
+  display: flex;
+  flex-flow: column wrap;
+  border: 3px solid black;
+  min-width: 250px;
+  max-height: 300px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  margin: 4%;
+}
+.img-container {
+  display: flex;
+  border: 2px solid deeppink;
+  width: 250px;
+  height: 250px;
+}
+.box img {
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+.box h3 {
+  background-color: black;
+  border: 1px solid blue;
+  padding: 5%;
+}
+/*  here starts the "info" section  */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid aqua;
+  background-color: white;
+  width: 100%;
+  height: auto;
+  color: black;
+  font-size: 1.25rem;
+}
+.locations, .hours {
+  width: 250px;
+  border: 1px solid red;
+  font-size: 0.8em;
+  margin: 5% 10%;
+}
+.locations h3, .hours h3 {
+  background-color: black;
+  color: white;
+  padding: 7%;
+}
+.locations p, .hours p {
+  padding: 6% 0;
+
+}
+/* begining "footer"  */
+footer {
+  height: auto;
+  width: 60%;
+  border: 1px solid red;
+  margin: 0 auto;
+}
+footer p {
+  padding: 5% 10%;
+}
 @media only screen and (max-width: 480px) {
   header span {
     font-size: 75%; /*  or instead "0.75erm"  */
