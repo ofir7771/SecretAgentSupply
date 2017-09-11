@@ -1,34 +1,34 @@
 html, body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
   color: white;
   margin: 0 auto;
   background-color: black;
-  width: 100%;
+  width: 960px;
 }
 header {
   display: flex;
   align-items: center;
-  max-width: 60%;
-  height: 50px;
+  width: 100%;
+
   border: 1px solid red;
   margin: 0 auto;
-  padding: 20px 0;
+
 }
 header span {
-  margin: auto 10px;
-  font-size: 1.25rem;
+  margin: 0.66rem 1rem;
+  font-size: 1rem;
   border: 1px solid blue;
 }
 header img {
-  margin-left: 10%;
+  margin-left: 0.5rem;
   border: 1px solid deeppink;
-  max-height: 50%;
+  height: 1.5rem;
 }
 /*  here starts the nain content  */
 main {
   height: auto;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   border: 1px solid white;
 }
@@ -36,45 +36,46 @@ main {
 /* starting "banner"  */
 
 .banner {                /*   parent is "main" tag  */
-  display: flex;
+  display: block;
   background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 25rem;
   margin: 0 auto;
   border: 1px solid aqua;
 }
-.banner h3, .banner h1 {
+.banner h3 {
   font-weight: bold;
-  max-width: 300px;
-  max-height: 100%;
-  line-height: 35px;
-  margin-left: 10%;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 0.25rem;
+
   text-align: left;
   border: 1px solid orchid;
 }
 .banner h1 {
-  font-size: 1.75rem;
-  margin-top: 3%;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
 }
 .banner-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  min-width: 30%;
-  height: 40%;
+  display: block;
+  width: 20rem;
+
   border: 1px solid red;
   background-color: black;
-  margin: auto 10% auto 10%; /* can't seem to center it with "auto"  */
+  margin-top: 9rem;
+  margin-left: 6rem;
 }
 /*  navigation starts here */
 #categories {     /*  parent is "main" tag  */
   display: flex;
   max-width: 100%;
-  background-color: #b00024;
+  background-color: firebrick;
 }
 #categories ul {
   display: flex;
@@ -88,10 +89,10 @@ main {
 }
 #categories li {
   display: inline-flex;
-  margin: 5px auto;
+  margin: 0.75rem auto;
   max-width: 100%;
   border: 1px solid hotpink;
-  padding: 10px;
+  padding: 0 10px;
   text-align: center;
   font-size: 1.25rem;
 }
