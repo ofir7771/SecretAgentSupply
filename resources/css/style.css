@@ -1,6 +1,5 @@
 html, body {
   font-family: Arial, sans-serif;
-  font-size: 16px;
   color: white;
   margin: 0 auto;
   background-color: black;
@@ -11,18 +10,15 @@ header {
   align-items: center;
   max-width: 60%;
   height: 50px;
-  border: 1px solid red;
   margin: 0 auto;
   padding: 20px 0;
 }
 header span {
   margin: auto 10px;
   font-size: 1.25rem;
-  border: 1px solid blue;
 }
 header img {
   margin-left: 10%;
-  border: 1px solid deeppink;
   max-height: 50%;
 }
 /*  here starts the nain content  */
@@ -30,7 +26,6 @@ main {
   height: auto;
   width: 60%;
   margin: 0 auto;
-  border: 1px solid white;
 }
 
 /* starting "banner"  */
@@ -44,7 +39,6 @@ main {
   width: 100%;
   height: 500px;
   margin: 0 auto;
-  border: 1px solid aqua;
 }
 .banner h3, .banner h1 {
   font-weight: bold;
@@ -53,10 +47,10 @@ main {
   line-height: 35px;
   margin-left: 10%;
   text-align: left;
-  border: 1px solid orchid;
+  font-size: 1.25rem;
 }
 .banner h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-top: 3%;
 }
 .banner-text {
@@ -66,9 +60,8 @@ main {
   justify-content: center;
   min-width: 30%;
   height: 40%;
-  border: 1px solid red;
   background-color: black;
-  margin: auto 10% auto 10%; /* can't seem to center it with "auto"  */
+  margin: auto 10% auto 10%;
 }
 /*  navigation starts here */
 #categories {     /*  parent is "main" tag  */
@@ -81,7 +74,6 @@ main {
   width: 100%;
   flex-wrap: wrap;
   list-style: none;
-  border: 1px solid forestgreen;
   justify-content: space-around;
   text-align: center;
   margin: 0 10%;
@@ -90,16 +82,16 @@ main {
   display: inline-flex;
   margin: 5px auto;
   max-width: 100%;
-  border: 1px solid hotpink;
   padding: 10px;
   text-align: center;
   font-size: 1.25rem;
 }
-
+#categories li:first-child {
+  display: none;
+}
 /*  here starts the "products" section  */
 
 .products {
-  border: 1px solid springgreen;
   background-color: white;
   display: flex;
   width: 100%;
@@ -111,9 +103,10 @@ main {
 .box {
   display: flex;
   flex-flow: column wrap;
+  align-items: center;
   border: 3px solid black;
-  min-width: 250px;
-  max-height: 300px;
+  min-width: 30%;
+  max-height: 35%;
   overflow: hidden;
   background-color: white;
   text-align: center;
@@ -121,25 +114,24 @@ main {
 }
 .img-container {
   display: flex;
-  border: 2px solid deeppink;
   width: 250px;
   height: 250px;
 }
 .box img {
-  width: 60%;
+  width: 70%;
   height: auto;
   margin: auto;
+  border: 1px solid green;
 }
 .box h3 {
   background-color: black;
-  border: 1px solid blue;
   padding: 5%;
+  width: 100%;
 }
 /*  here starts the "info" section  */
 .info {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid aqua;
   background-color: white;
   width: 100%;
   height: auto;
@@ -147,8 +139,7 @@ main {
   font-size: 1.25rem;
 }
 .locations, .hours {
-  width: 250px;
-  border: 1px solid red;
+  width: 300px;
   font-size: 0.8em;
   margin: 5% 10%;
 }
@@ -165,14 +156,119 @@ main {
 footer {
   height: auto;
   width: 60%;
-  border: 1px solid red;
   margin: 0 auto;
 }
 footer p {
   padding: 5% 10%;
 }
+
+/* for tablets & screens smaller than 1024px  */
+
+@media only screen and (max-width: 1024px) {
+  header, main, footer {
+    width: 100%;
+  }
+  header img, header {
+    margin-left: 10px;
+  }
+  .banner-text {
+    width: 60%;
+  }
+  .banner h1 {
+    font-size: 2.25rem;
+    max-width: 80%;
+    line-height: 2.85rem;
+  }
+  .banner h3 {
+    font-size: 1.5rem;
+    max-width: 80%;
+  }
+  #categories li {
+    display: none;
+  }
+  #categories li:first-child {
+    display: flex;
+  }
+  .products {
+    justify-content: space-between;
+  }
+  .box {
+    width: 47%;
+    margin: 3rem 0;
+  }
+  .box img {
+    width: 80%;
+  }
+  .info {
+    justify-content: space-between;
+  }
+  .locations, .hours {
+    width: 35%;
+    margin: 5% 0;
+  }
+  footer {
+    width: 100%;
+  }
+}
+
+/*  targeting phones and small screens  */
+
 @media only screen and (max-width: 480px) {
+  header, main, footer {
+    width: 100%;
+  }
   header span {
     font-size: 75%; /*  or instead "0.75erm"  */
+  }
+  .banner {
+    align-items: flex-end;
+    height: 15rem;
+  }
+  .banner-text {
+    width: 100%;
+    height: auto;
+    padding: 1rem 2rem;
+    margin: 0;
+  }
+  .banner h1 {
+    font-size: 1rem;
+    line-height: normal;
+    width: 100%;
+    margin: 0;
+    }
+  .banner h3 {
+    font-size: 0.77rem;
+    width: 100%;
+    margin: 0;
+  }
+  header {
+    width: 100%;
+  }
+  header span {
+    display: none;
+  }
+  header img {
+    margin: 0 auto;
+  }
+  .products {
+    justify-content: center;
+  }
+  .box {
+    width: 90%;
+    margin: 3rem 0;
+  }
+  .box img {
+    width: 80%;
+  }
+  .info {
+    justify-content: center;
+  }
+  .locations, .hours {
+    width: 90%;
+    margin: 5% 0;
+  }
+  footer p {
+    margin: 0 auto;
+    text-align: center;
   }
 }
